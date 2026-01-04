@@ -7,7 +7,7 @@ function App() {
 
   useEffect(() => {
     const fetchTodos = async () => {
-      const res = await axios.get("http://localhost:5000/todos");
+      const res = await axios.get("http://localhost:5050/todos");
       setTodos(res.data);
     };
 
@@ -17,10 +17,10 @@ function App() {
   const addTodo = async () => {
     if (text === "") return;
 
-    await axios.post("http://localhost:5000/todos/add", { text });
+    await axios.post("http://localhost:5050/todos/add", { text });
     setText("");
     
-    const res = await axios.get("http://localhost:5000/todos");
+    const res = await axios.get("http://localhost:5050/todos");
     setTodos(res.data);
   };
 
