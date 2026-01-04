@@ -1,8 +1,7 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const todoSchema = new mongoose.Schema({
-    text: String
-})
+  text: String
+});
 
-module.exports = mongoose.model("Todo",todoSchema)
-
+module.exports = mongoose.model("Todo", todoSchema);
